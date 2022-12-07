@@ -1,0 +1,17 @@
+# Exported from 3D Builder
+
+newmtl Green_0
+Kd 0.129412 0.733333 0.298039
+
+newmtl Mat_0
+Kd 1.000000 1.000000 1.000000
+map_Kd brmarble.jpg
+
+newmtl Turquoise_0
+Kd 0.000000 0.627451 0.909804
+
+newmtl Cylinder_001_0
+Kd 0.836283 0.836283 0.836283
+
+newmtl Plane_0
+Kd 0.933628 0.272652 0.272652
