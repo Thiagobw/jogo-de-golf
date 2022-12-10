@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class moveBolinha : MonoBehaviour
+public class Teste : MonoBehaviour
 {
     public float x, y;
     float velocity;
@@ -40,4 +40,5 @@ public class moveBolinha : MonoBehaviour
             lr.enabled = false;    
         }
     }
+
 }
