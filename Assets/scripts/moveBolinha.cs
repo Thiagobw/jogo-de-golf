@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Teste : MonoBehaviour
+public class moveBolinha : MonoBehaviour
 {
-public float x, y;
+    public float x, y;
     float velocity;
     LineRenderer lr;
     Rigidbody rb;
