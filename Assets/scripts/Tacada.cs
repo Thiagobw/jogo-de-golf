@@ -14,7 +14,7 @@ public class Tacada : MonoBehaviour
         lr = GetComponent<LineRenderer>();
         if (lr == null)
         {
-            Debug.Debug.Log("add lR!");
+            Debug.Log("add lR!");
             lr.enabled = false;
         }
     }
@@ -22,7 +22,7 @@ public class Tacada : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < Input.TouchCount; i++)
+        for (int i = 0; i < Input.touchCount; i++)
         {
             Touch t = Input.GetTouch(i);
 
@@ -42,20 +42,18 @@ public class Tacada : MonoBehaviour
                 pf = t.position;
                 x = (pi.x - pf.x) * 0.03f;
                 y = (pi.y - pf.y) * 0.03f;
-                if (x > mX)
-                {
+                if (x > mX) {
                     x = mX;
                 }
-                if (y > mY)
-                {
+
+                if (y > mY) {
                     y = mY;
                 }
                 lr.SetPosition(1, new Vector3(transform.position.x + x, transform.position.y, transform.position.z + y));
             }
 
-            if (t.phase == TouchPhase.Ended)
-            {
-                GetComponent<RigidBody>().AddForce(mew Vector3(2 * x, 0, 2 * y), ForceMode.Impulse);
+            if (t.phase == TouchPhase.Ended) {
+                GetComponent<Rigidbody>().AddForce(new Vector3(2*x, 0, 2*y), ForceMode.Impulse);
                 lr.enabled = false;
             }
         }
